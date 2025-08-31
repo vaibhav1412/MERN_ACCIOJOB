@@ -141,3 +141,24 @@ console.log(startString2);
 1 2 3
 1 2 3 4
 */
+
+//========================================== do while =============================================
+
+/*do {
+    console.log("Hi I'm do while loop !!");
+}while(false);
+
+const response = prompt("Do you want Continue !!");
+console.log(response);
+
+let response1;
+let responseCounter=0;
+*/
+do {
+    
+    response1 = prompt("Do you want Continue !!");  
+   console.log(response1); 
+   responseCounter++;
+}while(response1 == "yes" || response1=="YES");
+
+// need to learn from lecture
