@@ -53,7 +53,7 @@ console.log("div is :",c);
 
 //reminder mod -> %
 c = a%b;
-console.log("Sum is :",c);
+console.log("rem is :",c);
 
 // power -> **
 c = 2**4;
