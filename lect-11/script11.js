@@ -1,3 +1,12 @@
+// function declaration
+
+function greet()  // function declaration
+{
+    console.log("Hello World")
+}
+
+greet()  // function calling
+
 function hello_platform(name, platform)
 {
     console.log ("hello "+name+", welcome to our "+platform)
@@ -51,4 +60,10 @@ console.log("Total fine = "+library(22));
    2) after declaring all variables are contaning in array
 
 */
+function Display(a,b, ...c)
+{
+    console.log(a,b,c);
+};
+Display(1,2,3,4,5);
+
 
