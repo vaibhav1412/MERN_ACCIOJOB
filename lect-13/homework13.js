@@ -17,7 +17,7 @@ function findMissingElement (arr)
 {
     for (let i=1;i<=arr.length;i++)
     {
-        if (i!=arr[i-1])   // condition to check posirion element
+        if (i!=arr[i-1])   // condition to check position element
         { 
             return("missing Element : "+i)
         }
