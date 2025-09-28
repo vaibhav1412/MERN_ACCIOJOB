@@ -122,4 +122,82 @@ console.log(arr3);// paste numbers
 
 //spread operator in objects
 
-console.log(arr1.join())
+let customer1 = {
+  age: 20,
+  name: "tejas",
+};
+
+let customer2 = { customer1 };// paste as it is object
+let customer3 = { ...customer1 }; //paste key-value only of object
+
+console.log({ customer2, customer3 });
+
+
+let studentdetails = {
+  age: 15,
+  name: "mangesh",
+};
+let academicDetails = {
+  marks: 165,
+  grade: "O",
+};
+
+//merging two or more objects using spread operator
+let studentData = {
+  ...studentdetails,
+  ...academicDetails,
+};
+console.log({ ...studentData });
+
+/* issue with copying object with spread operators */
+
+obj1 = {
+  a: {
+    b: {
+      c: 3,
+    },
+  },
+};
+
+obj2 = { ...obj1 }; //This copies only the first level of obj1 into obj2
+obj2.a.b.c = 12;    // update the value obj1 level after level 1 (obj2.a is still a reference to the same object as obj1.a.)
+console.log({ obj2 });
+console.log({ obj1 });
+
+// using create shallow copy To fix this, we need a deep copy
+
+// Deep Copy Concept
+
+let customer = {
+  id: 101,
+  name: "aniket Sharma",
+  contact: {
+    email: "anket@gmail.com",
+    phone: "987**432*0",
+    city: "pune"
+  }
+};
+console.log("Object For diff Shallow and Deep Copy:",customer)
+
+// Deep copy using JSON method
+let deepCopyCustomer = JSON.parse(JSON.stringify(customer)); 
+// JSON.parse(): string->object
+// JSON.stringify(): object->string
+            
+deepCopyCustomer.contact.phone = "1111111111"; //deep copy modification
+
+console.log("Deep Copy:",deepCopyCustomer)
+console.log("after deep Copy original :",customer) //not change
+
+//Shallow using spread operator
+let shallowCopyCustomer={...customer} //using spread operator
+shallowCopyCustomer.contact.phone="22222222222";
+
+console.log("Shallow Copy:",shallowCopyCustomer)
+console.log("after Shallow Copy original :",customer)
+
+/*
+IMP NOTE:
+1]Shallow copy (using spread operator) allow level 1 nesting than consider original obj
+2]Deep copy (JSON method) allow for multilevel nesting
+*/
