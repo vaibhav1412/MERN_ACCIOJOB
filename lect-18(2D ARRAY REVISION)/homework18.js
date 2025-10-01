@@ -150,6 +150,7 @@ vaibhav
  "          // give error */
 
 
+ //3] 
 /* Printing a string */
 let str="hello vaibhav!"
 console.log(str);
@@ -192,3 +193,9 @@ console.log("     hello   everyone!    ".trim());  // remove trailling and leadi
 console.log("substring".substring(3));
 console.log("substring".substring(-5));  // minus value consider 0
 console.log("substring".substring(0,3));
+
+//slice
+console.log("mastercard".slice(2))
+console.log("mastercard".slice(-4))
+console.log("mastercar".slice(0,6))
+console.log("mastercard".slice(-4,0))

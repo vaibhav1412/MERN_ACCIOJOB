@@ -165,8 +165,3 @@ console.log(objectInStr);
 let strToObj = JSON.parse(objectInStringFormat); //converting a object-string to object
 console.log({ strToObj });
 
-console.log(
-  JSON.parse(
-    `{"name":"Digvesh jadhav","standard":"1th","gender":"male","section":"B"}`
-  )
-);
