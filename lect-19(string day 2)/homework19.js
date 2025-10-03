@@ -209,3 +209,88 @@ function isPalindrom (str)
 }
 console.log("is Palindrome:",isPalindrom("XYZ"));
 console.log("is Palindrome:",isPalindrom("XYX"));
+
+/* check if a string is palindrom or not, ignore cases (upper/lower) & spaces */
+
+str="Nurses Run"
+
+console.log(isPalindrom(str.trim().toLowerCase().replaceAll(" ","")));
+
+//H.W -> finding length of longest word
+//input: str = "Pune is the most loved city for its weather"
+//output: 7
+
+function highestLengthWord(str)
+{
+     str=str.trim().split(" ");
+     let n=str.length;
+     let maxLength=0
+
+     for( let i=0; i<n; i++)
+     {
+        let temp=str[i].split("").length+1
+
+        temp>maxLength ? maxLength=temp : temp=temp
+     }
+     return maxLength
+}
+console.log(`maxLength of Word in ${str} is:`,highestLengthWord(str)); //7
+
+// lastIndexOf() method
+console.log("stringMethodsring".lastIndexOf("s")); //12
+
+
+/* Q. -> write a function to find the first non-repeating character in a string 
+
+input: "stringMethodsring"
+output: "M"
+*/
+
+function firstNonRepeatingCharacter(str)
+{
+    str=str.trim();
+    n=str.length;
+
+    for(let i=0 ; i<str.length; i++)
+    {
+        // use inbuild method for string
+        if (str.indexOf(str[i])===str.lastIndexOf(str[i]))
+            return str[i];
+    }
+    return "Not-found";
+}
+console.log(firstNonRepeatingCharacter("stringMethodsring")); //M
+
+/* write a function to count the frequency of each character */
+
+// here use shortCircuiting concept and object
+
+function frequencyOfEachChar(str)
+{
+   let freq={}   // empty object to sore char and count
+   let n=str.length
+
+    for (let i=0; i<n; i++)
+    {
+        freq[str[i]]=(freq[str[i]] || 0)+1  // short cicuiting 
+    }
+    return freq
+
+
+}
+console.log(frequencyOfEachChar("ababd"))
+
+ // without using object
+ function frequencyOfEachChar2()
+ {
+    let visited=[];
+    str=str.split();
+    for(let i=0; i<str.lenght; i++)
+    {
+        let count=1;
+        for(let j=i+1; j<str.length; j++)
+        {
+            
+        }
+    }
+}
