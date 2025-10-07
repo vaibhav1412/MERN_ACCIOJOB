@@ -127,6 +127,32 @@ arr1=[[1,  2,  3],
 ]
 rotation(arr1,3)
 
+// rotation 180 degree
+arr1=[[1,  2,  3],
+ [5,  6,  7],
+ [9, 10, 11]
+]
+
+function rotation180(arr)
+{
+    // swapping upper row to lower
+    let n=arr.length;
+let output=[]
+    for (let i=n-1; i>=0; i--)
+    {
+        let temp=[]
+        for (let j=n-1; j>=0; j--)
+        {
+            temp.push(arr[i][j])
+        }
+        output.push(temp)  
+    }
+    
+    console.log("rotation 180: ")
+    console.log(output)
+}
+console.log("arr:",arr1)
+rotation180(arr1)
 // primary digonal element of matrix
 
 arr1=
@@ -202,3 +228,37 @@ function upperLowerSecondPrimary(arr)
     }
 }
 upperLowerSecondPrimary(arr1)
+
+// object practice
+
+let obj={
+    50:"dcc",
+    ddd:"cds",
+    avg:{
+        a2:"df"
+
+    }
+}
+console.log(obj["ddd"])
+console.log(obj[50])
+console.log(obj["50"])
+//console.log(obj[ddd]) ->not allowed
+//console.log(obj.50) //not allowed
+console.log(obj.ddd)
+
+// spread operator
+let obj1={...obj}
+console.log(obj)
+
+// deep copy
+
+let deepCopy= JSON.parse(JSON.stringify(obj));
+console.log("DeepCopy:",deepCopy)
+
+deepCopy.avg.a2="strong";
+console.log("modify deepCopy:",deepCopy)
+console.log("after modification of deep copy OG object:",obj)
+
+obj1.avg.a2="level 1";
+console.log("modify shallow copy:",obj1)
+console.log("after modification of shallow copy OG object:",obj) // also change
