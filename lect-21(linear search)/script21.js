@@ -122,7 +122,8 @@ console.log(fruits);
 let arr=[2,1,3,4,2,1,5,4]
 
 console.log([...new Set(arr)]);
-
+let s=new Set(arr)
+console.log(s)
 // anagram
 
 function isAnagram(str1,str2)
